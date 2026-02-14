@@ -35,6 +35,7 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           context: .
+          
+          file: ./docker/Dockerfile
           push: true
-          # Nome do repositório fixo em minúsculo para o Docker não reclamar
           tags: ghcr.io/luaclanmc/luaclan/luaclan-core:latest
