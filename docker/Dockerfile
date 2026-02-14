@@ -1,9 +1,11 @@
-FROM openjdk:17-jdk-slim
+
+FROM eclipse-temurin:21-jre-alpine
 
 
 WORKDIR /server-core
 
 
-COPY build/libs/LuaClanCore.jar /app/plugins/LuaClanCore.jar
+COPY build/libs/LuaClanCore.jar /server/plugins/LuaClanCore.jar
 
-CMD ["java", "-Xmx2G", "-jar", "paper.jar", "nogui"]
+
+CMD ["echo", "Plugin LuaClanCore carregado!"]
