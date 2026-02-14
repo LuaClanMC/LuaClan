@@ -1,0 +1,32 @@
+plugins {
+    id 'java'
+}
+
+group = 'com.luaclan'
+version = '1.0'
+
+repositories {
+    mavenCentral()
+    maven { 
+        name = "papermc"
+        url = "https://repo.papermc.io/repository/maven-public/" 
+    }
+}
+
+dependencies {
+    // API do Paper para a versão 1.21.1
+    compileOnly 'io.papermc.paper:paper-api:1.21.1-R0.1-SNAPSHOT'
+}
+
+java {
+    
+    toolchain.languageVersion = JavaLanguageVersion.of(21)
+}
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
+
+jar {
+    archiveFileName = "LuaClanCore.jar"
+}
