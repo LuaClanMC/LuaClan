@@ -11,36 +11,30 @@ permissions:
 jobs:
   docker-build:
     runs-on: ubuntu-latest
-
     steps:
-    - name: Checkout Repository
-      uses: actions/checkout@v4
+      - name: Checkout Repository
+        uses: actions/checkout@v4
 
-    - name: Set up JDK 21
-      uses: actions/setup-java@v4
-      with:
-        java-version: '21'
-        distribution: 'temurin'
+      - name: Set up JDK 21
+        uses: actions/setup-java@v4
+        with:
+          java-version: '21'
+          distribution: 'temurin'
 
-    
-    - name: Build with Gradle
-      run: gradle build
+      - name: Build with Gradle
+        run: gradle build
 
-    - name: Log in to GitHub Container Registry
-      uses: docker/login-action@v3
-      with:
-        registry: ghcr.io
-        username: ${{ github.actor }}
-        password: ${{ secrets.GITHUB_TOKEN }}
+      - name: Log in to GitHub Container Registry
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
 
-    - name: Build and Push Docker Image
-      uses: docker/build-push-action@v5
-      with:
-        context: .
-        push: true
-        
-        tags: ghcr.io/LuaClanMC/LuaClan/luaclan-core:latest
-      with:
-        context: .
-        push: true
-        tags: ghcr.io/${{ github.repository }}/luaclan-core:latest
+      - name: Build and Push Docker Image
+        uses: docker/build-push-action@v5
+        with:
+          context: .
+          push: true
+          # Nome do repositório fixo em minúsculo para o Docker não reclamar
+          tags: ghcr.io/luaclanmc/luaclan/luaclan-core:latest
