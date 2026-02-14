@@ -38,4 +38,9 @@ jobs:
       with:
         context: .
         push: true
+        
+        tags: ghcr.io/LuaClanMC/LuaClan/luaclan-core:latest
+      with:
+        context: .
+        push: true
         tags: ghcr.io/${{ github.repository }}/luaclan-core:latest
