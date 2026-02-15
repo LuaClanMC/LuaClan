@@ -1,3 +1,7 @@
+<div align="center">
+    <img src="lua_clan.jpg" alt="LuaClan Banner">
+</div>
+
 # 🌙 LuaClanCore
 
 ![Build Status](https://github.com/LuaClanMC/LuaClan/actions/workflows/build.yml/badge.svg)
