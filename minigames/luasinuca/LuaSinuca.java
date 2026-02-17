@@ -1,4 +1,4 @@
-package net.theastro.luaclan.luasinuca;
+package net.theastro.luaclan.betminigame;
 
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
