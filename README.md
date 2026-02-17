@@ -9,7 +9,7 @@
 ![Version](https://img.shields.io/badge/Minecraft-1.21.1-green)
 ![Java](https://img.shields.io/badge/Java-21-orange?logo=openjdk)
 
-O **LuaClanCore** é o núcleo tecnológico do servidor LuaClan. Este plugin foi desenvolvido do zero para garantir alta performance, segurança e funcionalidades exclusivas para a nossa comunidade, utilizando as tecnologias mais modernas de desenvolvimento para Minecraft.
+O **LuaClanCore** é o núcleo tecnológico do servidor LuaClan. Este server foi desenvolvido do zero para garantir alta performance, segurança e funcionalidades exclusivas para a nossa comunidade, utilizando as tecnologias mais modernas de desenvolvimento para Minecraft.
 
 ---
 
